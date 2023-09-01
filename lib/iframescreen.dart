@@ -13,12 +13,13 @@ class IframeScreen extends StatefulWidget {
 
 class _IframeScreenState extends State<IframeScreen> {
   final IFrameElement _iFrameElement = IFrameElement();
-
+  String url = Uri.base.toString().split('?id=')[1];
   @override
   void initState() {
+    print(url);
     _iFrameElement.style.height = '100%';
     _iFrameElement.style.width = '100%';
-    _iFrameElement.src = 'https://iframe.huddle01.com/cor-lwyu-san';
+    _iFrameElement.src = 'https://iframe.huddle01.com/${url}';
     _iFrameElement.style.border = 'none';
     window.navigator.getUserMedia(audio: true, video: true);
 
