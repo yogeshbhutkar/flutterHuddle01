@@ -18,8 +18,9 @@ class _IframeScreenState extends State<IframeScreen> {
   void initState() {
     _iFrameElement.style.height = '100%';
     _iFrameElement.style.width = '100%';
-    _iFrameElement.src = 'https://iframe.huddle01.com/ttf-ydzq-bjy/audio';
+    _iFrameElement.src = 'https://iframe.huddle01.com/cor-lwyu-san';
     _iFrameElement.style.border = 'none';
+    window.navigator.getUserMedia(audio: true, video: true);
 
 // ignore: undefined_prefixed_name
     ui.platformViewRegistry.registerViewFactory(
